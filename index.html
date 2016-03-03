@@ -45,14 +45,21 @@
                     3. Use CSS to right align the dollar amounts.
                     4. Title your page appropriately and add your byline.
                 -->
-                <table>
+                <table class="donations" "table">
                   <thead>
+                  <tr>
                     <th>Date</th>
                     <th>Info</th>
                     <th>Amount</th>
+                  </tr>
                   </thead>
                   <tbody>
-
+                    <tr>
+                      <td>{{amount}}</td>
+                      <td>{{info}}</td>
+                      <td>{{date}}</td>
+                    </tr>
+                    <tbody>
                 </table>
 
             </div>
