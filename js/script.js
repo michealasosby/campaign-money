@@ -33,23 +33,23 @@ function loadData() {
 	// - Contribution Date
 	// - Contributon Information
 	// - Amount
-}
+function writeTable(data){
 
-for (i =0; i < donationsData.length; i++) {
-	var date = donationsData[i]["Contribution Date"];
-	var info = donationsData[i]["Contribution Information"];
-	var amount = donationsData[i]["Amount"];
-	var committee = donationsData[i]["Committee"];
+for (i=0; i < data.length; i++) {
+	var date = data[i]["Contribution Date"];
+	var info = data[i]["Contribution Information"];
+	var amount = data[i]["Amount"];
+	var committee = data[i]["Committee"];
 
-	if (Committee === "CITIZENS TO ELECT KURT SCHAEFER ATTORNEY GENERAL") {
+	if (committee === "CITIZENS TO ELECT KURT SCHAEFER ATTORNEY GENERAL") {
 		console.log(date, info, amount, committee)
-	}
-}
+		$(".chart .table .tbody").append(
+		"<tr>"+
+				"<td>"+date+"</td>"+
+				"<td>"+info+"</td>"+
+				"<td class='amount'>"+amount+"</td>"+
+		"</tr>")
 
-$(".chart").append(
-	"<table class='table-item'>"+
-		"<table class='columns' style='width: "+columnsWidth+"30px'>"+amount+"</div>"+
-		"<table class='rows' style='width: "rowsWidth+"30px'>"+amount+date+info"</div>"+
-	"</table>"
-);
+}
+}
 }
